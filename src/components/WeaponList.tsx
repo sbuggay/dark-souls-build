@@ -6,7 +6,7 @@ import weapons, { IWeapon } from "../data/weapons";
 class WeaponList extends React.Component {
     public renderStatTable(weapon: IWeapon) {
         return (
-            <table>
+            <table className="WeaponStatTable">
                 <tr>
                     <td><img src={`/images/misc/physical_damage_dark_souls.jpg`} /></td>
                     <td>{weapon.atk.physical}</td>
@@ -14,8 +14,8 @@ class WeaponList extends React.Component {
                     <td>{weapon.req.strength}</td>
                     <td><img src={`/images/misc/bleed_dark_souls.jpg`} /></td>
                     <td>{weapon.effects.bleed ? weapon.effects.bleed : "-"}</td>
-                    <td><img src={`/images/misc/durability_dark_souls.jpg`} /></td>
-                    <td>{weapon.durability}</td>
+                    <td><img src={`/images/misc/critical_dark_souls.jpg`} /></td>
+                    <td>{weapon.atk.bonus}</td>
                 </tr>
                 <tr>
                     <td><img src={`/images/misc/fire_damage_dark_souls.jpg`} /></td>
@@ -24,8 +24,8 @@ class WeaponList extends React.Component {
                     <td>{weapon.req.dexterity}</td>
                     <td><img src={`/images/misc/divine_dark_souls.jpg`} /></td>
                     <td>{weapon.effects.divine ? weapon.effects.divine : "-"}</td>
-                    <td><img src={`/images/misc/physical_damage_dark_souls.jpg`} /></td>
-                    <td>{weapon.weight}</td>
+                    <td><img src={`/images/misc/stability_dark_souls.jpg`} /></td>
+                    <td>-</td>
                 </tr>
                 <tr>
                     <td><img src={`/images/misc/lightning_damage_dark_souls.jpg`} /></td>
@@ -34,6 +34,8 @@ class WeaponList extends React.Component {
                     <td>{weapon.req.intelligence}</td>
                     <td><img src={`/images/misc/occult_dark_souls.jpg`} /></td>
                     <td>{weapon.effects.occult ? weapon.effects.occult : "-"}</td>
+                    <td><img src={`/images/misc/durability_dark_souls.jpg`} /></td>
+                    <td>{weapon.durability}</td>
                 </tr>
                 <tr>
                     <td><img src={`/images/misc/magic_damage_dark_souls.jpg`} /></td>
@@ -42,6 +44,8 @@ class WeaponList extends React.Component {
                     <td>{weapon.req.faith}</td>
                     <td><img src={`/images/misc/poison_dark_souls.jpg`} /></td>
                     <td>{weapon.effects.poison ? weapon.effects.poison : "-"}</td>
+                    <td><img src={`/images/misc/weight_dark_souls.jpg`} /></td>
+                    <td>{weapon.weight}</td>
                 </tr>
 
             </table>
