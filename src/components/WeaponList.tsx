@@ -53,7 +53,6 @@ class WeaponList extends React.Component {
     }
 
     public render() {
-        console.log(weapons);
         const weaponElements = weapons.map((weapon, i) => {
             const imageName = weapon.name.toLocaleLowerCase().replace(/ /g, "_").replace(/'/g, "");
             return (
